@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
+import { AfterViewChecked, Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
 import { RAMCharacter, RAMState } from '../../reducers/ramState.state';
 import { Store } from '@ngrx/store';
 import { Observable, debounceTime, distinctUntilChanged, filter, fromEvent, tap } from 'rxjs';
@@ -16,7 +16,7 @@ import { loadCharacters, searchCharacter } from '../../reducers/ramState.actions
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewChecked {
   private store = inject(Store);
   ramState$?: Observable<RAMState>;
 
@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.stateSubscription();
   }
 
-  ngAfterViewInit() {
+  ngAfterViewChecked() {
     if (this.input) {
       fromEvent(this.input.nativeElement, 'keyup')
         .pipe(
