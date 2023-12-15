@@ -1,0 +1,27 @@
+@defer {
+  <div class="title">
+    <h1 class="creepster_colored">favoritos</h1>
+  </div>
+
+  <ng-template [ngIf]="favoriteCharacterList.length > 0">
+    <div class="galery">
+      <ng-template ngFor let-character [ngForOf]="favoriteCharacterList">
+        <app-card [character]="character" [isFavorite]="true"></app-card>
+      </ng-template>
+    </div>
+  </ng-template>
+
+  <ng-template [ngIf]="favoriteCharacterList.length === 0">
+    <div class="not_found_msg">
+      <h2 class="poppins_white">Parece que você ainda não tem favoritos</h2>
+      <p class="poppins_gray">Volte à página inicial e escolha os melhores para você.</p>
+      <a
+        class="return_bttn poppins_gray"
+        routerLink="/start"
+        ariaCurrentWhenActive="page"
+      >
+        Voltar ao início
+      </a>
+    </div>
+  </ng-template>
+}

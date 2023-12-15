@@ -1,0 +1,29 @@
+<nav class="global_header">
+  <img
+  [src]="imagePath"
+  alt="Rick & Morty"
+  class="logo_img"
+  >
+
+  <div class="nav_bttns_group">
+    <a
+      class="nav_bttn poppins_gray"
+      routerLink="/start"
+      routerLinkActive="nav_bttn_active"
+      ariaCurrentWhenActive="page"
+    >
+      <fa-icon [icon]="faHouse"></fa-icon>
+      Inicio
+    </a>
+    <a
+      class="nav_bttn poppins_gray"
+      routerLink="/favorites"
+      routerLinkActive="nav_bttn_active"
+      ariaCurrentWhenActive="page"
+    >
+      <fa-icon [icon]="faHeart"></fa-icon>
+      Favoritos | {{favCharacterCount}}
+
+    </a>
+  </div>
+</nav>

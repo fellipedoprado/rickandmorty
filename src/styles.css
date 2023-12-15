@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Creepster Font */
+@font-face {
+  font-family: 'Creepster';
+  src: url('assets/fonts/Creepster/Creepster-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Importing Poppins Font */
+@font-face {
+  font-family: 'Poppins';
+  src: url('assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*  */
+
+html {
+  background-color: #1F1F1F;
+}
+
+body {
+  margin: 0;
+}
+
+.component_content {
+  width: 100%;
+  display: flex;
+  max-width: 720px;
+  padding: 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  align-self: center;
+}
+
+.creepster_colored {
+  font-family: 'Creepster';
+  color: #00B5CC;
+  text-shadow: -1px 0 #B2DF28, 0 1px #B2DF28, 1px 0 #B2DF28, 0 -1px #B2DF28;
+  margin: 0;
+}
+
+.creepster_white {
+  font-family: 'Creepster';
+  color: #FAFAFA;
+  margin: 0;
+}
+
+.poppins_white {
+  font-family: 'Poppins';
+  color: #FAFAFA;
+}
+
+.poppins_gray {
+  font-family: 'Poppins';
+  color: #A4A4A4;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 1 0 0;
+}
+
+app-home, app-favorites {
+  width: 100%;
+  display: flex;
+  max-width: 720px;
+  padding: 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  align-self: center;
+}
+
+app-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}

@@ -1,0 +1,34 @@
+.title {
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.galery {
+  display: flex;
+  padding: 0;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 20px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.not_found_msg {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex: 1 0 0;
+  align-self: stretch;
+
+  height: 511px;
+
+  border-radius: 12px;
+  border: 1px solid #3D3D3D;
+  background: #0A0A0A;
+}

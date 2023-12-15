@@ -1,0 +1,27 @@
+<div class="card_style">
+  <div class="card_photo">
+    <img
+      [src]="character.image"
+      alt="Imagem do personagem {{character.name}}"
+      class="character_photo"
+    >
+
+    <button
+      class="favorited_btn"
+      *ngIf="isFavorite; else elseBlock"
+      (click)="unfavoriteCharacter()"
+    >
+      <fa-icon [icon]="faHeart"></fa-icon>
+    </button>
+    <ng-template #elseBlock>
+      <button class="unfavorited_btn" (click)="favoriteCharacter()">
+        <fa-icon [icon]="faHeart"></fa-icon>
+      </button>
+    </ng-template>
+
+  </div>
+  <div class="card_info">
+    <h2 class="creepster_white">{{character.name}}</h2>
+    <p class="poppins_gray">{{character.gender}}</p>
+  </div>
+</div>

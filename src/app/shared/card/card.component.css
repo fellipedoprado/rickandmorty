@@ -1,0 +1,62 @@
+.card_style {
+  display: flex;
+  min-width: 192px;
+  max-width: 224px;
+  padding: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  flex: 1 0 0;
+
+  border-radius: 12px;
+  border: 1px solid #3D3D3D;
+  background: #0A0A0A;
+}
+
+.character_photo {
+  height: 224px;
+  align-self: stretch;
+  border-radius: 12px;
+  /* background: url(<path-to-image>), lightgray 0px 0px / 100% 100% no-repeat; */
+}
+
+.card_info {
+  display: flex;
+  padding: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+  border-radius: 12px;
+}
+
+.card_photo {
+  position: relative;
+  width: 50%;
+}
+
+.favorited_btn {
+  position: absolute;
+  top: 0;
+  left: 199px;
+  background-color: #FFFFFF;
+  color: #0A0A0A;
+  font-size: 16px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 70%;
+}
+
+.unfavorited_btn {
+  position: absolute;
+  top: 0;
+  left: 199px;
+  background-color: #ffffff00;
+  color: #FAFAFA;
+  font-size: 16px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 70%;
+}

@@ -1,0 +1,51 @@
+.global_header {
+  background-color: #000000;
+  height: 64px;
+
+  padding: 8px, 24px, 8px, 24px;
+  border-bottom: 1px solid #3D3D3D;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_img {
+  max-width: 114px;
+  max-height: 64px;
+}
+
+.nav_bttn {
+  display: flex;
+  height: 20px;
+  min-width: 65px;
+  padding: 4px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  box-shadow: inset 0 1px 0 0 #ffffff;
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  color: #0A0A0A;
+  text-decoration: none;
+  outline: 0;
+}
+
+.nav_bttn_active {
+  box-shadow: inset 0 1px 0 0 #0A0A0A;
+  background: #0A0A0A;
+  border: 1px solid #A4A4A4;
+  color: #ffffff;
+  /* text-shadow: 0 1px 0 #528ecc; */
+}
+
+.nav_bttns_group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

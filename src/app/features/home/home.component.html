@@ -1,0 +1,21 @@
+@defer {
+  <div class="title">
+    <h1 class="creepster_colored">início</h1>
+    <input placeholder="Search" #input>
+  </div>
+
+  <ng-template [ngIf]="searchCharacterList.length > 0">
+    <div class="galery">
+      <ng-template ngFor let-character [ngForOf]="searchCharacterList">
+        <app-card [character]="character" [isFavorite]="isFavorited(character.id)"></app-card>
+      </ng-template>
+    </div>
+  </ng-template>
+
+  <ng-template [ngIf]="searchCharacterList.length === 0">
+    <div class="not_found_msg">
+      <h2 class="poppins_white">Nada foi encontrado</h2>
+      <p class="poppins_gray">Tente realizar uma nova busca.</p>
+    </div>
+  </ng-template>
+}
